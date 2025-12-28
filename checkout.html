@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Highland Bean</title>
+    <link rel="stylesheet" href="./asset/css/styles.css">
+    <link rel="stylesheet" href="./asset/css/checkout.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>☕ Highland Bean</h1>
+                </div>
+                <div class="search-placeholder"></div>
+                <div class="header-actions">
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="cart.html" class="cart-btn">
+                        <span>🛒 Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="promotions.html" class="nav-link">Promotions</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Checkout</h2>
+            
+            <div class="checkout-wrapper">
+                <div class="checkout-form-section">
+                    <form id="checkoutForm" class="checkout-form">
+                        <div class="checkout-steps">
+                            <!-- Step 1: Shipping Info -->
+                            <div class="checkout-step active" id="step1">
+                                <h3>Step 1: Shipping Information</h3>
+                                <input type="text" placeholder="Full Name" id="fullName" required>
+                                <input type="email" placeholder="Email" id="email" required>
+                                <input type="tel" placeholder="Phone Number" id="phone" required>
+                                <textarea placeholder="Delivery Address" id="address" required></textarea>
+                                <button type="button" class="next-btn" onclick="nextCheckoutStep(2)">Continue →</button>
+                            </div>
+
+                            <!-- Step 2: Shipping Method -->
+                            <div class="checkout-step" id="step2">
+                                <h3>Step 2: Shipping Method</h3>
+                                <div class="shipping-options">
+                                    <label class="option">
+                                        <input type="radio" name="shipping" value="standard" checked>
+                                        <div class="option-content">
+                                            <span>Standard (Free if order ≥ 500k)</span>
+                                            <small>Estimated 2-3 days</small>
+                                        </div>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="shipping" value="express">
+                                        <div class="option-content">
+                                            <span>Express (+100k)</span>
+                                            <small>Estimated 1 day</small>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="step-buttons">
+                                    <button type="button" class="prev-btn" onclick="prevCheckoutStep(1)">← Back</button>
+                                    <button type="button" class="next-btn" onclick="nextCheckoutStep(3)">Continue →</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Payment Method -->
+                            <div class="checkout-step" id="step3">
+                                <h3>Step 3: Payment Method</h3>
+                                <div class="payment-options">
+                                    <label class="option">
+                                        <input type="radio" name="payment" value="cash" checked>
+                                        <div class="option-content">
+                                            <span>Cash on Delivery</span>
+                                            <small>Pay when you receive the order</small>
+                                        </div>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="payment" value="transfer">
+                                        <div class="option-content">
+                                            <span>Bank Transfer</span>
+                                            <small>VCB: 123456789 (Name: Highland Bean)</small>
+                                        </div>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="payment" value="card">
+                                        <div class="option-content">
+                                            <span>Credit Card</span>
+                                            <small>Visa, Mastercard, JCB</small>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="step-buttons">
+                                    <button type="button" class="prev-btn" onclick="prevCheckoutStep(2)">← Back</button>
+                                    <button type="submit" class="submit-btn">Place Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="order-summary-section">
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div id="orderSummary" class="order-items"></div>
+                        <div class="summary-footer">
+                            <div class="summary-item">
+                                <span>Subtotal:</span>
+                                <span id="checkoutSubtotal">0đ</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Shipping:</span>
+                                <span id="checkoutShipping">0đ</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Total:</span>
+                                <span id="checkoutTotal">0đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Highland Bean</h3>
+                    <p>Premium coffee with distinctive flavor</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Highland Bean. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/checkout-page.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* Variables */
+:root {
+  --primary: #4b2e2a;
+  --primary-light: #c8a165;
+  --background: #faf7f2;
+  --accent: #2e5e4e;
+  --accent-light: #d97b29;
+  --text: #333;
+  --text-light: #666;
+  --border: #ddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Authentication Pages */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  padding: 1rem;
+}
+
+.auth-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-logo h1 {
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+.auth-form h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group.checkbox input {
+  width: auto;
+  margin: 0;
+}
+
+.form-group.checkbox label {
+  margin: 0;
+}
+
+.form-group.checkbox a {
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+.form-group.checkbox a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--accent-light);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary);
+}
+
+.auth-footer {
+  text-align: center;
+}
+
+.auth-footer p {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.auth-footer a,
+.link {
+  color: var(--accent-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.auth-footer a:hover,
+.link:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 1.5rem;
+  }
+
+  .auth-logo h1 {
+    font-size: 1.4rem;
+  }
+}

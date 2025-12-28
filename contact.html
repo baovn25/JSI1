@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Highland Bean</title>
+    <link rel="stylesheet" href="./asset/css/styles.css">
+    <link rel="stylesheet" href="./asset/css/contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>☕ Highland Bean</h1>
+                </div>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search coffee...">
+                <div class="header-actions">
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="cart.html" class="cart-btn">
+                        <span>🛒 Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="promotions.html" class="nav-link">Promotions</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Contact Us</h2>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <h4>📍 Address</h4>
+                        <p>123 Tran Hung Dao Street, District 1, Ho Chi Minh City, Vietnam</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📞 Phone</h4>
+                        <p><a href="tel:0281234567">(028) 1234 5678</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>📧 Email</h4>
+                        <p><a href="mailto:info@highlandbean.com">info@highlandbean.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h4>🕐 Opening Hours</h4>
+                        <p>Monday - Sunday: 7:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Send Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <textarea placeholder="Message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Highland Bean</h3>
+                    <p>Premium coffee with distinctive flavor</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Highland Bean. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

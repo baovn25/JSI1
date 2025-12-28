@@ -1,0 +1,139 @@
+/* ===== RESET CƠ BẢN ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #FAF7F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== KHUNG NGOÀI ===== */
+.auth-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== LOGO ===== */
+.auth-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-logo h1 {
+    color: #4B2E2A;
+    font-size: 26px;
+}
+
+/* ===== FORM ===== */
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2E5E4E;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #4B2E2A;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #C8A165;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #D97B29;
+    box-shadow: 0 0 0 2px rgba(217,123,41,0.2);
+}
+
+/* ===== CHECKBOX ===== */
+.form-group.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group.checkbox label {
+    margin: 0;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ===== BUTTON ===== */
+.submit-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #D97B29;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #b96320;
+    transform: translateY(-2px);
+}
+
+/* ===== FOOTER LINK ===== */
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.auth-footer p {
+    margin: 6px 0;
+}
+
+.auth-footer .link {
+    color: #2E5E4E;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer .link:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .auth-container {
+        padding: 20px;
+        margin: 0 10px;
+    }
+}

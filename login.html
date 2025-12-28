@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Highland Bean</title>
+    <link rel="stylesheet" href="./asset/css/auth.css">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-container">
+            <div class="auth-logo">
+                <h1>☕ Highland Bean</h1>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <h2>Login</h2>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password" required>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Login</button>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html" class="link">Register now</a></p>
+                    <p><a href="#" class="link">Forgot password?</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

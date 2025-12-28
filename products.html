@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Highland Bean</title>
+    <link rel="stylesheet" href="./asset/css/products.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>☕ Highland Bean</h1>
+                </div>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search coffee...">
+                <div class="header-actions">
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="cart.html" class="cart-btn">
+                        <span>🛒 Cart</span>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="promotions.html" class="nav-link">Promotions</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2>Product Menu</h2>
+            
+            <div class="products-container">
+                <!-- Sidebar Filters -->
+                <aside class="sidebar">
+                    <h3>Filter Products</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" class="category-filter" value="all" checked> All</label>
+                            <label><input type="checkbox" class="category-filter" value="espresso"> Espresso</label>
+                            <label><input type="checkbox" class="category-filter" value="milk"> Coffee with Milk</label>
+                            <label><input type="checkbox" class="category-filter" value="cold"> Cold Coffee</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price</h4>
+                        <div class="filter-options">
+                            <label><input type="checkbox" class="price-filter" value="0-50000"> Under 50k</label>
+                            <label><input type="checkbox" class="price-filter" value="50000-100000"> 50k - 100k</label>
+                            <label><input type="checkbox" class="price-filter" value="100000"> Over 100k</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Sort By</h4>
+                        <select id="sortSelect">
+                            <option value="newest">Newest</option>
+                            <option value="bestseller">Best Sellers</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rating</option>
+                        </select>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <div class="products-grid" id="productsGrid"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="product-detail">
+                <img id="modalImage" src="/placeholder.svg" alt="Product">
+                <div class="product-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="rating" id="modalRating"></div>
+                    <p class="price" id="modalPrice"></p>
+                    <p id="modalDescription"></p>
+                    <div class="product-specs">
+                        <p id="modalSpecs"></p>
+                    </div>
+                    <div class="quantity-selector">
+                        <button id="decreaseQty">-</button>
+                        <input type="number" id="quantityInput" value="1" min="1">
+                        <button id="increaseQty">+</button>
+                    </div>
+                    <button class="add-to-cart-btn" id="addToCartBtn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Highland Bean</h3>
+                    <p>Premium coffee with distinctive flavor</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Highland Bean. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/products-page.js"></script>
+</body>
+</html>
