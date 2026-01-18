@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Highland Bean</title>
+    <title>Sản phẩm - Highland Bean</title>
     <link rel="stylesheet" href="./asset/css/products.css">
 </head>
 <body>
@@ -30,11 +30,10 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="products.html" class="nav-link active">Products</a>
-                <a href="promotions.html" class="nav-link">Promotions</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="products.html" class="nav-link active">Sản phẩm</a>
+                <a href="promotions.html" class="nav-link">Khuyến mãi</a>
+                <a href="contact.html" class="nav-link">Liên hệ</a>
             </div>
         </div>
     </nav>
@@ -42,40 +41,40 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <h2>Product Menu</h2>
+            <h2>Menu sản phẩm</h2>
             
             <div class="products-container">
                 <!-- Sidebar Filters -->
                 <aside class="sidebar">
-                    <h3>Filter Products</h3>
+                    <h3>Lọc sản phẩm</h3>
                     
                     <div class="filter-group">
-                        <h4>Category</h4>
+                        <h4>Danh mục</h4>
                         <div class="filter-options">
-                            <label><input type="checkbox" class="category-filter" value="all" checked> All</label>
+                            <label><input type="checkbox" class="category-filter" value="all" checked> Tất cả</label>
                             <label><input type="checkbox" class="category-filter" value="espresso"> Espresso</label>
-                            <label><input type="checkbox" class="category-filter" value="milk"> Coffee with Milk</label>
-                            <label><input type="checkbox" class="category-filter" value="cold"> Cold Coffee</label>
+                            <label><input type="checkbox" class="category-filter" value="milk"> Cà phê với sữa</label>
+                            <label><input type="checkbox" class="category-filter" value="cold"> Cà phê lạnh</label>
                         </div>
                     </div>
 
                     <div class="filter-group">
-                        <h4>Price</h4>
+                        <h4>Giá</h4>
                         <div class="filter-options">
-                            <label><input type="checkbox" class="price-filter" value="0-50000"> Under 50k</label>
+                            <label><input type="checkbox" class="price-filter" value="0-50000"> Dưới 50k</label>
                             <label><input type="checkbox" class="price-filter" value="50000-100000"> 50k - 100k</label>
-                            <label><input type="checkbox" class="price-filter" value="100000"> Over 100k</label>
+                            <label><input type="checkbox" class="price-filter" value="100000"> Trên 100k</label>
                         </div>
                     </div>
 
                     <div class="filter-group">
-                        <h4>Sort By</h4>
+                        <h4>Sắp xếp theo</h4>
                         <select id="sortSelect">
-                            <option value="newest">Newest</option>
-                            <option value="bestseller">Best Sellers</option>
-                            <option value="price-low">Price: Low to High</option>
-                            <option value="price-high">Price: High to Low</option>
-                            <option value="rating">Highest Rating</option>
+                            <option value="newest">Mới nhất</option>
+                            <option value="bestseller">Bán chạy nhất</option>
+                            <option value="price-low">Giá: Thấp đến Cao</option>
+                            <option value="price-high">Giá: Cao đến Thấp</option>
+                            <option value="rating">Xếp hạng cao nhất</option>
                         </select>
                     </div>
                 </aside>
@@ -119,32 +118,33 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Highland Bean</h3>
-                    <p>Premium coffee with distinctive flavor</p>
+                    <p>Cà phê hạng cao với hương vị đặc biệt</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3>Liên kết nhanh</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Support</h3>
+                    <h3>Hỗ trợ</h3>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Highland Bean. All rights reserved.</p>
+                <p>&copy; 2025 Highland Bean. Bản quyền được bảo vệ.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/products.js"></script>
-    <script src="js/products-page.js"></script>
+    <!-- Load product data first, then product logic -->
+    <script src="./asset/js/products.js"></script>
+    <script src="./asset/js/search-filter.js"></script>
 </body>
 </html>

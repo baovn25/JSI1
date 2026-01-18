@@ -1,0 +1,122 @@
+const products = [
+  {
+    id: 1,
+    name: "Espresso",
+    price: 45000,
+    image: "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500",
+    category: "espresso",
+    new: true,
+    bestseller: true,
+    rating: 4.5,
+    description: "Espresso đậm đà",
+    specs: "100% Arabica"
+  },
+  {
+    id: 2,
+    name: "Americano",
+    price: 50000,
+    image: "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=500",
+    category: "espresso",
+    new: false,
+    bestseller: false,
+    rating: 4.2,
+    description: "Americano dễ uống",
+    specs: "Arabica"
+  },
+  {
+    id: 3,
+    name: "Latte",
+    price: 60000,
+    image: "https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=500",
+    category: "milk",
+    new: true,
+    bestseller: true,
+    rating: 4.7,
+    description: "Latte béo mịn",
+    specs: "Sữa tươi"
+  },
+  {
+    id: 4,
+    name: "Cappuccino",
+    price: 60000,
+    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=500",
+    category: "milk",
+    new: false,
+    bestseller: true,
+    rating: 4.6,
+    description: "Cappuccino bọt sữa",
+    specs: "Foam"
+  },
+  {
+    id: 5,
+    name: "Mocha",
+    price: 65000,
+    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500",
+    category: "milk",
+    new: true,
+    bestseller: false,
+    rating: 4.4,
+    description: "Mocha chocolate",
+    specs: "Chocolate"
+  },
+  {
+    id: 6,
+    name: "Cold Brew",
+    price: 65000,
+    image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=500",
+    category: "cold",
+    new: true,
+    bestseller: true,
+    rating: 4.6,
+    description: "Cold brew mát lạnh",
+    specs: "Ủ lạnh 12h"
+  },
+  {
+    id: 7,
+    name: "Cold Brew Milk",
+    price: 70000,
+    image: "https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=500",
+    category: "cold",
+    new: false,
+    bestseller: true,
+    rating: 4.7,
+    description: "Cold brew sữa",
+    specs: "Ít đắng"
+  },
+  {
+    id: 8,
+    name: "Iced Latte",
+    price: 60000,
+    image: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=500",
+    category: "cold",
+    new: false,
+    bestseller: false,
+    rating: 4.3,
+    description: "Latte đá",
+    specs: "Mát lạnh"
+  },
+  {
+    id: 9,
+    name: "Double Espresso",
+    price: 55000,
+    image: "https://images.unsplash.com/photo-1523942839745-7848d5d7c95e?w=500",
+    category: "espresso",
+    new: true,
+    bestseller: false,
+    rating: 4.5,
+    description: "Espresso gấp đôi",
+    specs: "Caffeine cao"
+  },
+  {
+    id: 10,
+    name: "Flat White",
+    price: 60000,
+    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500",
+    category: "milk",
+    new: false,
+    bestseller: true,
+    rating: 4.6,
+    description: "Flat white mịn",
+    specs: "Sữa mịn"
+  }
+];

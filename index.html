@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./asset/css/index.css">
 </head>
 <body>
-
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -15,18 +14,11 @@
                 <div class="logo">
                     <h1>☕ Highland Bean</h1>
                 </div>
-
-                <input 
-                    type="text" 
-                    class="search-input" 
-                    id="searchInput" 
-                    placeholder="Tìm kiếm cà phê..."
-                >
-
+                <input type="text" class="search-input" id="searchInput" placeholder="Search coffee...">
                 <div class="header-actions">
-                    <a href="login.html" class="login-btn">Đăng nhập</a>
+                    <a href="login.html" class="login-btn">Login</a>
                     <a href="cart.html" class="cart-btn">
-                        <span>🛒 Giỏ hàng</span>
+                        <span>🛒 Cart</span>
                         <span class="cart-count" id="cartCount">0</span>
                     </a>
                 </div>
@@ -48,79 +40,122 @@
 
     <!-- Main Content -->
     <main class="main-content">
-
-        <!-- Hero -->
+        <!-- Hero Banner -->
         <div class="hero">
             <div class="hero-content">
                 <h2>Cà phê tươi mỗi ngày</h2>
-                <p>
-                    Thưởng thức những ly cà phê đậm đà được pha chế từ
-                    hạt cà phê chất lượng cao
-                </p>
-                <a href="products.html" class="cta-btn">Xem thực đơn</a>
+                <p>Thưởng thức những thức uống cà phê với hương vị đặc biệt từ những hạt cà phê chất lượng cao nhất</p>
+                <a href="products.html" class="cta-btn">Xem Menu</a>
             </div>
         </div>
 
-        <!-- About -->
+        <!-- About Section -->
         <section class="about-section">
             <div class="container">
                 <h2>Về Highland Bean</h2>
-                <p>
-                    Highland Bean là quán cà phê ấm cúng giữa lòng thành phố,
-                    chuyên phục vụ các loại cà phê chất lượng cao.
-                </p>
-
+                <p>Highland Bean là một quán cà phê thoải mái tại trung tâm thành phố, chuyên cung cấp các thức uống cà phê chất lượng cao từ những hạt nhập khẩu từ các vùng trồng cà phê nổi tiếng nhất thế giới.</p>
                 <div class="about-features">
                     <div class="feature">
-                        <h3>☕ Cà phê cao cấp</h3>
-                        <p>Hạt cà phê tuyển chọn từ các vùng nổi tiếng</p>
+                        <h3>☕ Cà phê hạng cao</h3>
+                        <p>Hạt nhập khẩu từ Ethiopia, Brazil, Colombia</p>
                     </div>
                     <div class="feature">
                         <h3>👨‍🍳 Barista chuyên nghiệp</h3>
-                        <p>Pha chế chuẩn vị – đậm đà – tinh tế</p>
+                        <p>Đội ngũ barista chuyên nghiệp với kiến thức sâu về cà phê</p>
                     </div>
                     <div class="feature">
                         <h3>🏠 Không gian thoải mái</h3>
-                        <p>Phù hợp học tập, làm việc và thư giãn</p>
+                        <p>Nơi hoàn hảo để thư giãn, làm việc và dành thời gian</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Featured Products -->
+        <section class="featured-section">
+            <div class="container">
+                <h2>Sản phẩm nổi bật</h2>
+                <div class="products-grid" id="featuredProducts"></div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="container">
+                <h2>Đánh giá của khách hàng</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p>"Cà phê ngon nhất khu vực, barista rất thân thiện!"</p>
+                        <p class="reviewer-name">- Minh Anh</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p>"Không gian yên tĩnh, hoàn hảo để làm việc. Sẽ quay lại!"</p>
+                        <p class="reviewer-name">- Hùng Việt</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <p>"Hương vị đặc biệt, mỗi lần ghé là một trải nghiệm mới"</p>
+                        <p class="reviewer-name">- Thanh Hương</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- ❗ FOOTER GIỮ NGUYÊN TIẾNG ANH -->
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="product-detail">
+                <img id="modalImage" src="/placeholder.svg" alt="Product">
+                <div class="product-info">
+                    <h2 id="modalTitle"></h2>
+                    <div class="rating" id="modalRating"></div>
+                    <p class="price" id="modalPrice"></p>
+                    <p id="modalDescription"></p>
+                    <div class="product-specs">
+                        <p id="modalSpecs"></p>
+                    </div>
+                    <div class="quantity-selector">
+                        <button id="decreaseQty">-</button>
+                        <input type="number" id="quantityInput" value="1" min="1">
+                        <button id="increaseQty">+</button>
+                    </div>
+                    <button class="add-to-cart-btn" id="addToCartBtn">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-
                 <div class="footer-section">
                     <h3>Highland Bean</h3>
-                    <p>Premium coffee – rich flavor</p>
+                    <p>Cà phê hạng cao với hương vị đặc biệt</p>
                 </div>
-
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3>Liên kết nhanh</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-section">
-                    <h3>Support</h3>
+                    <h3>Hỗ trợ</h3>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
                 </div>
-
             </div>
-
             <div class="footer-bottom">
-                <p>&copy; 2025 Highland Bean. All rights reserved.</p>
+                <p>&copy; 2025 Highland Bean. Bản quyền được bảo vệ.</p>
             </div>
         </div>
     </footer>

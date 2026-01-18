@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Highland Bean</title>
-    <link rel="stylesheet" href="./asset/css/styles.css">
+    <title>Thanh toán - Highland Bean</title>
     <link rel="stylesheet" href="./asset/css/checkout.css">
 </head>
 <body>
@@ -31,11 +30,10 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="promotions.html" class="nav-link">Promotions</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Trang chủ</a>
+                <a href="products.html" class="nav-link">Sản phẩm</a>
+                <a href="promotions.html" class="nav-link">Khuyến mãi</a>
+                <a href="contact.html" class="nav-link">Liên hệ</a>
             </div>
         </div>
     </nav>
@@ -43,7 +41,7 @@
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">
-            <h2>Checkout</h2>
+            <h2>Thanh toán</h2>
             
             <div class="checkout-wrapper">
                 <div class="checkout-form-section">
@@ -51,68 +49,68 @@
                         <div class="checkout-steps">
                             <!-- Step 1: Shipping Info -->
                             <div class="checkout-step active" id="step1">
-                                <h3>Step 1: Shipping Information</h3>
-                                <input type="text" placeholder="Full Name" id="fullName" required>
+                                <h3>Bước 1: Thông tin giao hàng</h3>
+                                <input type="text" placeholder="Họ và tên" id="fullName" required>
                                 <input type="email" placeholder="Email" id="email" required>
-                                <input type="tel" placeholder="Phone Number" id="phone" required>
-                                <textarea placeholder="Delivery Address" id="address" required></textarea>
-                                <button type="button" class="next-btn" onclick="nextCheckoutStep(2)">Continue →</button>
+                                <input type="tel" placeholder="Số điện thoại" id="phone" required>
+                                <textarea placeholder="Địa chỉ giao hàng" id="address" required></textarea>
+                                <button type="button" class="next-btn" onclick="nextCheckoutStep(2)">Tiếp tục →</button>
                             </div>
 
                             <!-- Step 2: Shipping Method -->
                             <div class="checkout-step" id="step2">
-                                <h3>Step 2: Shipping Method</h3>
+                                <h3>Bước 2: Phương thức giao hàng</h3>
                                 <div class="shipping-options">
                                     <label class="option">
                                         <input type="radio" name="shipping" value="standard" checked>
                                         <div class="option-content">
-                                            <span>Standard (Free if order ≥ 500k)</span>
-                                            <small>Estimated 2-3 days</small>
+                                            <span>Tiêu chuẩn (Miễn phí nếu đơn hàng ≥ 500k)</span>
+                                            <small>Dự kiến 2-3 ngày</small>
                                         </div>
                                     </label>
                                     <label class="option">
                                         <input type="radio" name="shipping" value="express">
                                         <div class="option-content">
-                                            <span>Express (+100k)</span>
-                                            <small>Estimated 1 day</small>
+                                            <span>Nhanh (+100k)</span>
+                                            <small>Dự kiến 1 ngày</small>
                                         </div>
                                     </label>
                                 </div>
                                 <div class="step-buttons">
-                                    <button type="button" class="prev-btn" onclick="prevCheckoutStep(1)">← Back</button>
-                                    <button type="button" class="next-btn" onclick="nextCheckoutStep(3)">Continue →</button>
+                                    <button type="button" class="prev-btn" onclick="prevCheckoutStep(1)">← Quay lại</button>
+                                    <button type="button" class="next-btn" onclick="nextCheckoutStep(3)">Tiếp tục →</button>
                                 </div>
                             </div>
 
                             <!-- Step 3: Payment Method -->
                             <div class="checkout-step" id="step3">
-                                <h3>Step 3: Payment Method</h3>
+                                <h3>Bước 3: Phương thức thanh toán</h3>
                                 <div class="payment-options">
                                     <label class="option">
                                         <input type="radio" name="payment" value="cash" checked>
                                         <div class="option-content">
-                                            <span>Cash on Delivery</span>
-                                            <small>Pay when you receive the order</small>
+                                            <span>Thanh toán khi nhận hàng</span>
+                                            <small>Thanh toán khi nhận đơn hàng</small>
                                         </div>
                                     </label>
                                     <label class="option">
                                         <input type="radio" name="payment" value="transfer">
                                         <div class="option-content">
-                                            <span>Bank Transfer</span>
-                                            <small>VCB: 123456789 (Name: Highland Bean)</small>
+                                            <span>Chuyển khoản ngân hàng</span>
+                                            <small>VCB: 123456789 (Tên: Highland Bean)</small>
                                         </div>
                                     </label>
                                     <label class="option">
                                         <input type="radio" name="payment" value="card">
                                         <div class="option-content">
-                                            <span>Credit Card</span>
+                                            <span>Thẻ tín dụng</span>
                                             <small>Visa, Mastercard, JCB</small>
                                         </div>
                                     </label>
                                 </div>
                                 <div class="step-buttons">
-                                    <button type="button" class="prev-btn" onclick="prevCheckoutStep(2)">← Back</button>
-                                    <button type="submit" class="submit-btn">Place Order</button>
+                                    <button type="button" class="prev-btn" onclick="prevCheckoutStep(2)">← Quay lại</button>
+                                    <button type="submit" class="submit-btn">Đặt hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -121,19 +119,19 @@
 
                 <aside class="order-summary-section">
                     <div class="order-summary">
-                        <h3>Order Summary</h3>
+                        <h3>Tóm tắt đơn hàng</h3>
                         <div id="orderSummary" class="order-items"></div>
                         <div class="summary-footer">
                             <div class="summary-item">
-                                <span>Subtotal:</span>
+                                <span>Tạm tính:</span>
                                 <span id="checkoutSubtotal">0đ</span>
                             </div>
                             <div class="summary-item">
-                                <span>Shipping:</span>
+                                <span>Giao hàng:</span>
                                 <span id="checkoutShipping">0đ</span>
                             </div>
                             <div class="summary-item total">
-                                <span>Total:</span>
+                                <span>Tổng cộng:</span>
                                 <span id="checkoutTotal">0đ</span>
                             </div>
                         </div>
@@ -149,27 +147,27 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Highland Bean</h3>
-                    <p>Premium coffee with distinctive flavor</p>
+                    <p>Cà phê hạng cao với hương vị đặc biệt</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Quick Links</h3>
+                    <h3>Liên kết nhanh</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Support</h3>
+                    <h3>Hỗ trợ</h3>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Điều khoản sử dụng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Highland Bean. All rights reserved.</p>
+                <p>&copy; 2025 Highland Bean. Bản quyền được bảo vệ.</p>
             </div>
         </div>
     </footer>
